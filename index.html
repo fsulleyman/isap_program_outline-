@@ -30,6 +30,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15
 .facts b{display:block;font-weight:600}
 .facts small{color:#c9cde6;font-size:.9rem}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.outline-head{padding:30px 20px 18px}
+.outline-head h2{font-size:clamp(1.8rem,7vw,2.4rem);letter-spacing:-.02em}
+.outline-head h2::after{content:"";display:block;width:56px;height:4px;background:var(--gold);border-radius:2px;margin-top:10px}
+.outline-head p{margin:12px 0 0;color:var(--muted)}
 .tabs{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
 .tabs .wrap{display:flex;gap:8px;padding:10px 20px}
 .tab{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 16px "Source Sans 3",sans-serif;padding:10px 12px;border-radius:999px;cursor:pointer}
@@ -76,6 +80,11 @@ footer a{color:inherit}
     <li><b>PCU Auditorium (Second Floor)</b><small>UPSA Campus, Accra</small></li>
   </ul>
 </div></header>
+
+<section class="outline-head"><div class="wrap">
+  <h2>Programme Outline</h2>
+  <p>Tap a session below to see the resource persons and details.</p>
+</div></section>
 
 <nav class="tabs" aria-label="Programme sessions"><div class="wrap" id="tabs" role="tablist"></div></nav>
 <main><div class="wrap" id="view"></div></main>
